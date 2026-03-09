@@ -25,9 +25,12 @@ export default function AdminLayout() {
                 <NavLink to="/admin/ventas" className={linkClass}>Ventas</NavLink>
               </div>
             </div>
-            <button onClick={handleLogout} className="text-green-100 hover:text-white text-sm cursor-pointer">
-              Cerrar Sesión
-            </button>
+            <div className="flex items-center gap-4">
+              <NavLink to="/" className="text-green-100 hover:text-white text-sm">Inicio</NavLink>
+              <button onClick={handleLogout} className="text-green-100 hover:text-white text-sm cursor-pointer">
+                Cerrar Sesión
+              </button>
+            </div>
           </div>
         </div>
       </nav>

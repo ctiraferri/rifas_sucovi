@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import api from '../services/api'
 
 const initialForm = {
@@ -86,6 +87,9 @@ export default function VentaForm() {
   return (
     <div className="min-h-screen bg-white py-8 px-4">
       <div className="max-w-2xl mx-auto">
+        <div className="mb-4">
+          <Link to="/" className="text-sm text-gray-400 hover:text-gray-600">&larr; Volver al inicio</Link>
+        </div>
         <div className="text-center mb-8">
           <img src={`${import.meta.env.BASE_URL}logoSUCOVI.jpeg`} alt="SUCOVI 2027" className="w-28 h-28 mx-auto mb-2 object-contain" />
           <h1 className="text-3xl font-bold text-gray-800">Rifas SUCOVI 2027</h1>
