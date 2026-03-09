@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import api from '../services/api'
 
@@ -28,7 +28,11 @@ export default function AdminLogin() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-red-50 flex items-center justify-center px-4">
-      <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-sm border-t-4 border-[#008C45]">
+      <div className="w-full max-w-sm">
+        <div className="mb-4">
+          <Link to="/" className="text-sm text-gray-400 hover:text-gray-600">&larr; Volver al inicio</Link>
+        </div>
+      <div className="bg-white rounded-lg shadow-md p-8 w-full border-t-4 border-[#008C45]">
         <div className="flex justify-center gap-1 mb-4">
           <div className="w-6 h-1.5 rounded-full bg-[#008C45]"></div>
           <div className="w-6 h-1.5 rounded-full bg-white border border-gray-200"></div>
@@ -65,6 +69,7 @@ export default function AdminLogin() {
             {loading ? 'Ingresando...' : 'Ingresar'}
           </button>
         </form>
+      </div>
       </div>
     </div>
   )
