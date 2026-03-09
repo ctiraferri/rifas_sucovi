@@ -8,6 +8,7 @@ import VentaForm from './pages/VentaForm'
 import AdminLogin from './pages/AdminLogin'
 import AdminRifas from './pages/AdminRifas'
 import AdminVentas from './pages/AdminVentas'
+import AdminSorteo from './pages/AdminSorteo'
 import './index.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route element={<AdminLayout />}>
               <Route path="/admin/rifas" element={<AdminRifas />} />
               <Route path="/admin/ventas" element={<AdminVentas />} />
+              <Route path="/admin/sorteo" element={<AdminSorteo />} />
             </Route>
           </Route>
         </Routes>

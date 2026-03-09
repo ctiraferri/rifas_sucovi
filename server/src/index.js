@@ -12,13 +12,14 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/rifas', require('./routes/rifas'));
 app.use('/api/ventas', require('./routes/ventas'));
+app.use('/api/sorteos', require('./routes/sorteos'));
 
 // Servir frontend estático
 const clientDist = path.join(__dirname, '..', '..', 'client', 'dist');
 app.use(express.static(clientDist));
 
 // SPA fallback: cualquier ruta no-API devuelve index.html
-app.get('*', (req, res) => {
+app.get(/^(?!\/api).*/, (req, res) => {
   res.sendFile(path.join(clientDist, 'index.html'));
 });
 

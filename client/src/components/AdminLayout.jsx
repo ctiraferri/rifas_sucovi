@@ -23,6 +23,7 @@ export default function AdminLayout() {
               <div className="flex gap-1 ml-6">
                 <NavLink to="/admin/rifas" className={linkClass}>Rifas</NavLink>
                 <NavLink to="/admin/ventas" className={linkClass}>Ventas</NavLink>
+                <NavLink to="/admin/sorteo" className={linkClass}>Sorteo</NavLink>
               </div>
             </div>
             <div className="flex items-center gap-4">
