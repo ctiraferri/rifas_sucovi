@@ -6,7 +6,7 @@ const errorHandler = require('./middleware/errorHandler');
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://ctiraferri.github.io'],
+  origin: ['http://localhost:5173', 'https://ctiraferri.github.io', 'https://rifas.sucovi.com.ar'],
 }));
 app.use(express.json());
 
