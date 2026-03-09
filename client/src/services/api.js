@@ -1,8 +1,6 @@
 import axios from 'axios'
 
-const baseURL = import.meta.env.PROD
-  ? 'https://rifas.sucovi.com.ar/api'
-  : '/api'
+const baseURL = '/api'
 
 const api = axios.create({
   baseURL,
